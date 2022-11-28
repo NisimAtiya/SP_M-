@@ -31,6 +31,13 @@ void FW(){
             }
         }
     }
+    for (int i = 0; i <size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if(mat[i][j]==__INT_MAX__){
+                mat[i][j]=0;
+            }
+        }
+    }
 
 }
 void A(){
