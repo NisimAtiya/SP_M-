@@ -3,24 +3,23 @@
 
 int main() {
     char operation;
+    int i=0,j=0;
     scanf("%c", &operation);
     while (operation != 'D') {
         if (operation == 'A') {
             A();
-            scanf("%c", &operation);
+
         }
         else if (operation == 'B') {
-            int i = scanf("%d", &i);
-            int j = scanf("%d", &j);
+            scanf("%d %d",&i,&j);
             B(i, j);
-            scanf("%c", &operation);
         }
         else if (operation == 'C') {
-            int i = scanf("%d", &i);
-            int j = scanf("%d", &j);
+            scanf("%d %d",&i,&j);
             C(i, j);
-            scanf("%c", &operation);
         }
+        scanf("%c",&operation);
+
     }
     return 0;
 }
