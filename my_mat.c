@@ -49,14 +49,14 @@ void A(){
     FW();
 }
 void B(int i,int j) {
-    if ( (mat[i][j] == 0) || (mat[i][j] == __INT_MAX__) ) {
+    if ( mat[i][j] == 0) {
         printf("False\n");
     } else {
         printf("True\n");
     }
 }
 void C(int i, int j){
-        if( (mat[i][j] != 0) || (mat[i][j] != __INT_MAX__) ){
+        if( (mat[i][j] != 0)){
             printf("%d\n",mat[i][j]);
         }else{
             printf("-1\n");
