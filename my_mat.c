@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include  "my_mat.h"
-
-int mat[10][10];
+#define size  10
+int mat[size][size]={0};
 int min(int i, int j){
     if(i<j){
         return i;
@@ -11,16 +11,16 @@ int min(int i, int j){
 }
 void FW(){
     int k,i,j;
-    for (int i = 0; i <10; ++i) {
-        for (int j = 0; j < 10; ++j) {
+    for (int i = 0; i <size; ++i) {
+        for (int j = 0; j < size; ++j) {
                if((i!=j) && (mat[i][j]==0)){
                    mat[i][j]=__INT_MAX__;
                }
         }
     }
-    for(k=0; k < 10; k++){
-        for(i=0;i<10;i++){
-            for(j=0;j<10;j++){
+    for(k=0; k < size; k++){
+        for(i=0;i<size;i++){
+            for(j=0;j<size;j++){
                 int temp = 0;
                 if((mat[i][k]==__INT_MAX__) || (mat[k][j]==__INT_MAX__) ){
                     temp = __INT_MAX__;
@@ -34,8 +34,8 @@ void FW(){
 
 }
 void A(){
-    for (int i = 0; i < 10; ++i) {
-        for (int j = 0; j < 10; ++j) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
             scanf("%d",&mat[i][j]);
         }
     }
